@@ -19,9 +19,6 @@
 ![js](https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=JavaScript&logoColor=white)
 
 
-# E-R 다이어그램
-
-
 # 핵심 기능 및 페이지 소개
 
 <H3>메인 페이지</H3>
