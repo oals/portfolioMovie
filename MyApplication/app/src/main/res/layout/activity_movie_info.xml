@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:tag="infoGenreIdsItem2"
+    tools:context=".MovieInfoActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="350dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="205dp">
+
+            <TextView
+                android:id="@+id/movieInfoOpenDt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="84dp"
+                android:text="2023-04-03"
+                android:textColor="#AAAAAA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="291dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#807E7E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="291dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#807E7E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="291dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#807E7E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/movieInfo"
+                android:layout_width="295dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/movieInfoRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="147dp"
+                android:layout_marginTop="52dp"
+                android:text="(10.0)"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <TextView
+                android:id="@+id/movieInfoNm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="오펜하이머"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/movieInfoAdult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="52dp"
+                android:text="청소년 관람불가"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/infoGenreIdsItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="120dp"
+                android:background="#BCBCBC"
+                android:tag="InfoGenreIdsItem2"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/infoGenreIdsItem1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/infoGenreIdsItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="120dp"
+                android:background="#BCBCBC"
+                android:tag="InfoGenreIdsItem3"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/infoGenreIdsItem2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/infoGenreIdsItem4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="120dp"
+                android:background="#BCBCBC"
+                android:tag="InfoGenreIdsItem4"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/infoGenreIdsItem3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/infoGenreIdsItem5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="120dp"
+                android:background="#BCBCBC"
+                android:tag="InfoGenreIdsItem5"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/infoGenreIdsItem4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:text="줄거리"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.455"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieInfoRating" />
+
+            <TextView
+                android:id="@+id/infoGenreIdsItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="120dp"
+                android:background="#BCBCBC"
+                android:tag="InfoGenreIdsItem1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/runTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="55dp"
+                android:text="110분"
+                app:layout_constraintStart_toEndOf="@+id/timerIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="38dp"
+                android:text="제작사"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieInfo" />
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="68dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:tag="logoImageView1"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                app:srcCompat="@drawable/android" />
+
+            <ImageView
+                android:id="@+id/logoImageView2"
+                android:layout_width="68dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"
+                android:tag="logoImageView2"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/logoImageView"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                app:srcCompat="@drawable/android" />
+
+            <ImageView
+                android:id="@+id/logoImageView3"
+                android:layout_width="68dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"
+                android:tag="logoImageView3"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/logoImageView2"
+                app:layout_constraintTop_toBottomOf="@+id/view5"
+                app:srcCompat="@drawable/android" />
+
+            <TextView
+                android:id="@+id/tagLine"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieInfo" />
+
+            <TextView
+                android:id="@+id/creaditBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="67dp"
+                android:tag="creaditBy1"
+                android:textColor="#9A9A9A"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/creaditBy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="87dp"
+                android:tag="creaditBy2"
+                android:textColor="#9A9A9A"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/creaditBy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="105dp"
+                android:paddingBottom="10dp"
+                android:tag="creaditBy3"
+                android:textColor="#9A9A9A"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="161dp"
+                android:layout_marginEnd="20dp"
+                android:text="평점"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/timerIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_more_time_24" />
+
+            <ImageView
+                android:id="@+id/ratingIcon1"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="8dp"
+                android:tag="ratingIcon1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:srcCompat="@drawable/baseline_star_24" />
+
+            <ImageView
+                android:id="@+id/ratingIcon2"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:tag="ratingIcon2"
+                app:layout_constraintStart_toEndOf="@+id/ratingIcon1"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:srcCompat="@drawable/baseline_star_24" />
+
+            <ImageView
+                android:id="@+id/ratingIcon3"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:tag="ratingIcon3"
+                app:layout_constraintStart_toEndOf="@+id/ratingIcon2"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:srcCompat="@drawable/baseline_star_24" />
+
+            <ImageView
+                android:id="@+id/ratingIcon4"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:tag="ratingIcon4"
+                app:layout_constraintStart_toEndOf="@+id/ratingIcon3"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:srcCompat="@drawable/baseline_star_24" />
+
+            <ImageView
+                android:id="@+id/ratingIcon5"
+                android:layout_width="39dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:tag="ratingIcon5"
+                app:layout_constraintStart_toEndOf="@+id/ratingIcon4"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:srcCompat="@drawable/baseline_star_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/TicketingBtn"
+        android:layout_width="314dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="520dp"
+        android:background="#0B0B0B"
+        android:backgroundTint="#FF0000"
+        android:text="예매하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/movieImageView" />
+
+    <ImageView
+        android:id="@+id/movieImageView"
+        android:layout_width="365dp"
+        android:layout_height="252dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/android" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

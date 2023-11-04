@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/baseline_movie_creation_24"
+        android:title="상영중" />
+    <item
+        android:id="@+id/item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="검색" />
+    <item
+        android:id="@+id/item3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/android"
+        android:title="마이페이지" />
+</menu>

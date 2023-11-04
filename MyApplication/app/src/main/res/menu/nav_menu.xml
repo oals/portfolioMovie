@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/loginItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="로그인" />
+    <item
+        android:id="@+id/registerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="회원가입" />
+    <item
+        android:id="@+id/logoutItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="로그아웃"
+        android:visible="false" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="설정" />
+</menu>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="355dp"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/registerUserId"
+                android:layout_width="238dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:hint="아이디를 입력해주세요."
+                android:inputType="text"
+                android:maxLength="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserNm" />
+
+            <EditText
+                android:id="@+id/registerUserPw"
+                android:layout_width="238dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="비밀번호를 입력해주세요."
+                android:inputType="textPassword"
+                android:maxLength="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserId" />
+
+            <EditText
+                android:id="@+id/registerUserNm"
+                android:layout_width="238dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="이름을 입력해주세요."
+                android:inputType="text"
+                android:maxLength="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/registerUserPhone1"
+                android:layout_width="69dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="010"
+                android:inputType="phone"
+                android:maxLength="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPw" />
+
+            <EditText
+                android:id="@+id/registerUserPhone3"
+                android:layout_width="72dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="0000"
+                android:inputType="phone"
+                android:maxLength="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintStart_toEndOf="@+id/registerUserPhone2"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPw" />
+
+            <EditText
+                android:id="@+id/registerUserPhone2"
+                android:layout_width="72dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="0000"
+                android:inputType="phone"
+                android:maxLength="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toEndOf="@+id/registerUserPhone1"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPw" />
+
+            <EditText
+                android:id="@+id/registerUserEmail1"
+                android:layout_width="69dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="test"
+                android:inputType="textEmailAddress"
+                android:maxLength="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPhone1" />
+
+            <EditText
+                android:id="@+id/registerUserEmail2"
+                android:layout_width="142dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="71dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="naver.com"
+                android:inputType="textEmailAddress"
+                android:maxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPhone1" />
+
+            <Button
+                android:id="@+id/registerBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="회원가입"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserSexWomanBtn"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <RadioButton
+                android:id="@+id/registerUserSexManBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="5dp"
+                android:text="남자"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dpSpinner" />
+
+            <RadioButton
+                android:id="@+id/registerUserSexWomanBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="여자"
+                app:layout_constraintStart_toEndOf="@+id/registerUserSexManBtn"
+                app:layout_constraintTop_toBottomOf="@+id/dpSpinner" />
+
+
+            <DatePicker
+                android:id="@+id/dpSpinner"
+                android:layout_width="320dp"
+                android:layout_height="119dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserEmail1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="10dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="30dp"
+                android:text="-"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/registerUserPhone2"
+                app:layout_constraintStart_toEndOf="@+id/registerUserPhone1"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPw" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="129dp"
+                android:layout_marginTop="20dp"
+                android:text=" @"
+                android:textColor="#B3B2B2"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPhone2" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="10dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="30dp"
+                android:text="-"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/registerUserPhone3"
+                app:layout_constraintStart_toEndOf="@+id/registerUserPhone2"
+                app:layout_constraintTop_toBottomOf="@+id/registerUserPw" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="262dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
