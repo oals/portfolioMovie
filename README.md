@@ -21,76 +21,75 @@
 
 # E-R 다이어그램
 
-![은행 프로젝트 erd](https://github.com/oals/PortfolioBank/assets/136543676/287f1ddb-4e14-4fa2-8248-1af365fb7412)
 
 # 핵심 기능 및 페이지 소개
 
 <H3>메인 페이지</H3>
 <BR>
 
-![개인 프로젝트 bank 메인 페이지](https://github.com/oals/PortfolioBank/assets/136543676/c8a1a3a4-6a7b-4514-b1cb-6861596c772a)
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/80fdb057-d991-40d2-a92e-8228a3e5ebf1" height="350">
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/cbedb271-b465-4bd2-b697-a9de43502fe9" height="350">
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/d56cb4eb-877b-4872-a4e2-74fbeeb886dd" height="350">
+
+
 
 <UL>
- <LI>등록된 계좌의 예금을 확인 할 수 있고 가입된 적금의 상태를 확인 할 수 있습니다.</LI>
+ <LI>현재 상영중인 혹은 상영 예정작들을 확인 할 수 있습니다.</LI>
 </UL>
 
 <HR>
 
-<H3>계좌 상세 페이지</H3>
+<H3>로그인 로그아웃</H3>
 <BR>
 
-![개인 프로젝트 bank 계좌 상세 페이지1](https://github.com/oals/PortfolioBank/assets/136543676/869c59bc-40cf-4d41-9e43-88d323e5b45b)
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/f7e17e95-006b-4b80-a25e-df0b82b238ff" height="350">
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/8e7173e9-fd9b-4a81-aced-a3ac695a9cba" height="350">
 
 <UL>
- <LI>계좌 상세 페이지 접근 시 해당 계좌의 비밀번호 네자리를 입력해야합니다. </LI>
+ <LI>로그인과 로그아웃 기능을 구현 했습니다.</LI>
 </UL>
 <BR>
-
-
-![개인 프로젝트 bank 계좌 상세 페이지2](https://github.com/oals/PortfolioBank/assets/136543676/a44b4ddf-223e-40de-8f71-64336e7f1db3)
-
-<BR>
-<UL>
- <LI>계좌의 입금, 송금, 적금 내역을 확인 할 수 있습니다  </LI>
-  <LI>등록된 나의 다른 계좌 목록을 볼 수 있습니다. </LI>
-</UL>
-<BR>
-
-
 
 <HR>
 
-<H3>계좌 등록 페이지</H3>
+<H3>영화 상세 페이지</H3>
 <BR>
 
-![개인 프로젝트 bank 계좌 등록 페이지1](https://github.com/oals/PortfolioBank/assets/136543676/e8b00da1-15e5-4f1e-b099-125c0fab2dcf)
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/eb07255e-cf1d-4fd4-baf1-a94383bb6c1b" height="350">
 
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/01e04713-8a48-46b8-aed9-a9135da04929" height="350">
 
-<BR>
-<UL>
- <LI>계좌명, 계좌번호 , 비밀번호 네자리를 통해 계좌를 등록 할 수 있습니다. </LI>
-</UL>
-<BR>
-
-![개인 프로젝트 bank 계좌 등록 페이지2](https://github.com/oals/PortfolioBank/assets/136543676/8174ccd3-96b7-4fd8-9bc3-8316198f3e35)
-
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/c597b592-4caf-4710-a70b-b1886570e010" height="350">
 
 <BR>
 <UL>
- <LI>계좌 번호는 16자리 이상이여야 등록 가능 합니다. </LI>
+ <LI>해당 영화의 정보, 평점, 줄거리, 제작사를 확인 할 수 있게 만들었습니다.</LI>
 </UL>
 <BR>
 
 
 <HR>
 
-<H3>계좌 이체 페이지</H3>
+<H3>영화 예매 페이지</H3>
 <BR>
 
-![개인 프로젝트 bank 계좌 이체 페이지1](https://github.com/oals/PortfolioBank/assets/136543676/5318187c-6293-4f95-a91c-358576b57034)
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/e9933fb6-cafe-4bab-b39d-a2b318d1ee8d" height="350">
+
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/2df98309-39ca-43bd-8197-e761f1341361" height="350">
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/c30e5df8-803f-437a-acf7-7a3b7e2e8610" height="350">
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/0de27d3c-9047-4e6e-b1ed-043b4a16fb42" height="350">
+<img src="https://github.com/oals/portfolioMovie/assets/136543676/7027e176-2c2f-484f-a407-ad117bd84a5a" height="350">
 
 
-![개인 프로젝트 bank 계좌 이체 페이지3](https://github.com/oals/PortfolioBank/assets/136543676/661a3d6b-23bd-4723-ac70-3cb3f79fafbc)
+
+
+
+
 
 <BR>
 <UL>
