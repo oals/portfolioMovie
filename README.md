@@ -21,6 +21,347 @@
 
 # 핵심 기능 및 페이지 소개
 
+
+<details>
+ <summary> DBHelper 
+ 
+ </summary> 
+ 
+
+
+
+   
+
+        class DBHelper(
+        context: Context?,
+        name: String?,
+        factory: SQLiteDatabase.CursorFactory?,
+        version: Int
+    ): SQLiteOpenHelper(context, name, factory, version){
+
+
+        override fun onCreate(db: SQLiteDatabase) {
+        var sql: String = "CREATE TABLE if not exists userInfo(" +  //유저 테이블 생성
+                "userId text primary key," +
+                "userNm text," +
+                "userPw text," +
+                "userPhone text," +
+                "userEmail text," +
+                "userDob text," +
+                "userSex text," +
+                "userSignUpDate text);"
+
+        db.execSQL(sql)
+
+        var sql2: String = "CREATE TABLE if not exists ticketing(" +    //예매 내역 테이블 생성
+                "num INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "userId text," +
+                "movieId text," +
+                "movieNm text," +
+                "movieDate text,"+
+                "movieTime text,"+
+                "selectSeat text,"+
+                "totalAmount INTEGER,"+
+                "ticketingDate text);"
+
+        db.execSQL(sql2)
+
+
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        val sql: String = "DROP TABLE if exists userInfo"
+        db.execSQL(sql)
+        onCreate(db)
+    }
+    //회원가입
+    fun userRegister(userId: String,userNm : String, userPw: String, userPhone: String,userEmail : String ,userDob : String , userSex : String, time : String) {
+        val db = this.writableDatabase
+
+        db.execSQL("INSERT INTO userInfo VALUES('$userId','$userNm', $userPw, '$userPhone', '$userEmail','$userDob','$userSex', '$time')")
+
+    }
+    //아이디 중복 검사
+    fun userIdCheck(userId : String) : Boolean{
+        val db = this.writableDatabase
+
+        val cursor = db.rawQuery("SELECT * FROM userInfo where userId = '$userId'",null)
+
+
+        return when{
+            cursor.count > 0 -> false
+            else -> true
+        }
+
+    }
+
+    //로그인
+    fun userLogin(userId:String, userPw:String) : Boolean{
+
+        val db = this.writableDatabase
+
+       val cursor = db.rawQuery("SELECT * FROM userInfo where userId = '$userId' and userPw = '$userPw'",null)
+
+        return when{
+            cursor.count == 0 -> false
+            else -> true
+        }
+    }
+
+    //유저 정보 가져오기
+    fun selectUserInfo(userId : String) : Cursor {
+        val db = this.writableDatabase
+
+        val cursor = db.rawQuery("SELECT * FROM userInfo where userId = '$userId'",null)
+        val i : Int = 0
+        cursor.moveToFirst()
+
+
+        return cursor
+    }
+
+    //예매 내역 가져오기
+    fun selectTicketingInfo(userId : String) : Cursor{
+        val db = this.writableDatabase
+
+        val cursor = db.rawQuery("SELECT * FROM ticketing where userId = '$userId' order by num desc",null)
+
+        return cursor
+
+    }
+
+    //예매하기
+    fun insertTicketing(userId : String,movieId : String, movieNm : String, movieDate : String, movieTime : String, selectSeat : String, totalAmount : Int,ticketingDate : String){
+        val db = this.writableDatabase
+
+        db.execSQL("INSERT INTO ticketing('userId','movieId','movieNm','movieDate','movieTime','selectSeat','totalAmount','ticketingDate') " +
+                "VALUES('$userId','$movieId','$movieNm', '$movieDate', '$movieTime','$selectSeat','$totalAmount','$ticketingDate') ")
+
+    }
+
+    //예매된 좌석 가져오기
+    fun selectMovieSeat(movieNm : String, movieDate : String, movieTime : String) : Cursor{
+        val db = this.writableDatabase
+
+        val cursor = db.rawQuery("SELECT selectSeat FROM ticketing where movieNm = '$movieNm' and movieDate = '$movieDate' and movieTime = '$movieTime' ",null)
+
+        return cursor
+
+
+
+    }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+</details>
+
+
+
+<details>
+ <summary> MovieAdapter
+ 
+ </summary> 
+
+
+
+
+    class MovieAdapter(val context: Context, val movieList : ArrayList<Movie>) : BaseAdapter() {
+    override fun getCount(): Int {
+       return movieList.size
+    }
+
+    override fun getItem(position: Int): Any {
+        return movieList[position]
+    }
+
+    override fun getItemId(position: Int): Long {
+        return 0
+    }
+
+    @SuppressLint("MissingInflatedId")
+    override fun getView(position: Int, contentView: View?, parent: ViewGroup?): View {
+
+        val view :View = LayoutInflater.from(context).inflate(R.layout.list_movie_item,null)
+
+        val movieImg = view.findViewById<ImageView>(R.id.movieImg)
+        val movieNm = view.findViewById<TextView>(R.id.movieNm)
+        val openDt = view.findViewById<TextView>(R.id.openDt)
+        val rating = view.findViewById<TextView>(R.id.rating)
+        val adult = view.findViewById<TextView>(R.id.adult)
+
+
+        val movie = movieList[position]
+
+        //장르 가져오기
+        for(i in 1 .. movie.genreIdsList.size){
+            if(i == 6){
+                break;
+            }
+            view.findViewWithTag<TextView>("genreIdsItem" + i).text = movie.genreIdsList.get(i - 1)
+            view.findViewWithTag<TextView>("genreIdsItem" + i).setPadding(15)
+        }
+
+
+        val defaultImage = R.drawable.android
+        val url = movie.movieImg
+
+        //실제 이미지 가져오기
+        try{
+            Glide.with(this.context)
+                .load(url) // 불러올 이미지 url
+                .placeholder(defaultImage) // 이미지 로딩 시작하기 전 표시할 이미지
+                .error(defaultImage) // 로딩 에러 발생 시 표시할 이미지
+                .fallback(defaultImage) // 로드할 url 이 비어있을(null 등) 경우 표시할 이미지
+                .into(movieImg) // 이미지를 넣을 뷰
+
+        }catch (e : Exception){
+            Glide.with(this.context)
+                .load(url) // 불러올 이미지 url
+                .placeholder(defaultImage) // 이미지 로딩 시작하기 전 표시할 이미지
+                .error(defaultImage) // 로딩 에러 발생 시 표시할 이미지
+                .fallback(defaultImage) // 로드할 url 이 비어있을(null 등) 경우 표시할 이미지
+                .into(movieImg) // 이미지를 넣을 뷰
+        }
+
+
+
+        movieNm.text = movie.movieNm
+        openDt.text = movie.openDt
+        rating.text = movie.rating + "점"
+        if(movie.adult == true){
+            adult.text ="청소년 관람불가"
+        }else{
+            adult.text = "15세 이상 관람가능"
+        }
+
+        return view
+
+    }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+</details>
+
+
+
+<details>
+ <summary> TicketingAdapter
+ 
+ </summary> 
+ 
+
+
+
+    
+    class TicketingAdapter(val context: Context, val ticketingList : ArrayList<Ticket>)  : BaseAdapter() {
+
+    var queue: RequestQueue? = null
+
+    override fun getCount(): Int {
+        return ticketingList.size
+    }
+
+    override fun getItem(position: Int): Any {
+        return ticketingList[position]
+    }
+
+    override fun getItemId(p0: Int): Long {
+        return 0
+    }
+
+    @SuppressLint("MissingInflatedId")
+    override fun getView(position: Int, contentView: View?, parent: ViewGroup?): View {
+
+        val view : View = LayoutInflater.from(context).inflate(R.layout.list_ticket_item,null)
+
+        if (queue == null) {
+            queue = Volley.newRequestQueue(this.context)
+        }
+
+        val movieNm = view.findViewById<TextView>(R.id.itemMovieNm)
+
+        val ticket = ticketingList[position]
+
+        if(ticket.movieId.isNotEmpty()) {
+             GetOtherMovieInfoList(ticket.movieId,view)
+        }
+
+        movieNm.text = ticket.movieNm
+        view.findViewById<TextView>(R.id.clickText).paintFlags = Paint.UNDERLINE_TEXT_FLAG
+
+        return view
+    }
+
+    //영화 썸네일 이미지 가져오기
+    private fun GetOtherMovieInfoList(movieId: String, view: View) {
+
+
+        val url =
+            " https://api.themoviedb.org/3/movie/${movieId}?api_key=b30e9c35557f3ffb06960709c88d144b&language=ko-Kr"
+        val jsonRequest: JsonObjectRequest =
+            JsonObjectRequest(Request.Method.GET, url, null, { response ->
+
+                val jsonObject: JSONObject = response
+                val imageUrl = jsonObject.get("poster_path").toString()
+
+                val defaultImage = R.drawable.android
+
+                Glide.with(this.context)
+                    .load(
+                        "https://image.tmdb.org/t/p/w500" + imageUrl
+                    ) // 불러올 이미지 url
+                    .placeholder(defaultImage) // 이미지 로딩 시작하기 전 표시할 이미지
+                    .error(defaultImage) // 로딩 에러 발생 시 표시할 이미지
+                    .fallback(defaultImage) // 로드할 url 이 비어있을(null 등) 경우 표시할 이미지
+                    .into(view.findViewById<ImageView>(R.id.itemMovieImg))
+
+            }, { error ->
+                println(error.printStackTrace())
+            }
+            )
+        queue?.add(jsonRequest)
+
+    }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+</details>
+
+
+<hr>
+
 <H3>메인 페이지</H3>
 <BR>
 
