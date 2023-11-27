@@ -31,14 +31,19 @@
 
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/d56cb4eb-877b-4872-a4e2-74fbeeb886dd" height="350">
 
+<br>
+<br>
+<details>
+ <summary> 메인 화면 엑티비티 플로우 차트
+ 
+ </summary> 
+ 
+<img src='https://github.com/oals/portfolioMovie/assets/136543676/07933bb8-ca17-451a-868c-3756ee3f2231'>
+</details>
+<br>
+<br>
 
-<BR>
-<BR>
-<UL>
- <LI>현재 상영중인 혹은 상영 예정작들을 확인 할 수 있습니다.</LI>
-</UL>
-<BR>
-<BR>
+
 
 <HR>
 
@@ -52,13 +57,21 @@
 
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/c597b592-4caf-4710-a70b-b1886570e010" height="350">
 
-<BR>
-<BR>
-<UL>
- <LI>해당 영화의 정보, 평점, 줄거리, 제작사를 확인 할 수 있게 만들었습니다.</LI>
-</UL>
-<BR>
-<BR>
+
+<br>
+<br>
+<details>
+ <summary> 영화 상세 엑티비티 플로우 차트
+ 
+ </summary> 
+ 
+<img src='https://github.com/oals/portfolioMovie/assets/136543676/e2008abf-54e0-41a1-9a74-81040c6edf94'>
+</details>
+<br>
+<br>
+
+
+
 
 <HR>
 
@@ -73,14 +86,18 @@
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/0de27d3c-9047-4e6e-b1ed-043b4a16fb42" height="350">
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/7027e176-2c2f-484f-a407-ad117bd84a5a" height="350">
 
-<BR>
-<BR>
-<UL>
-   <LI> 영화 개봉일로부터 3주 후 까지 예매 가능하도록 달력 설정을 변경하였습니다. </LI>
- <LI> 날짜와 시간, 영화명을 통해 좌석 예매 혹은 이미 예매된 좌석 체크를 할 수 있도록 구현했습니다. </LI>
-</UL>
-<BR>
-<BR>
+
+<br>
+<br>
+<details>
+ <summary> 영화 예매 엑티비티 플로우 차트
+ 
+ </summary> 
+ 
+<img src='https://github.com/oals/portfolioMovie/assets/136543676/e83592f6-604f-4b11-b6c8-e01f6a9ad42e'>
+</details>
+<br>
+<br>
 
 <HR>
 <H3>영화 검색</H3>
@@ -91,14 +108,17 @@
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/b1ed1ade-83be-425f-b95c-44a725238f84" height="350">
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/d20c6218-49c9-4d10-9825-6b44f9fa37a8" height="350">
 
-<BR>
-<BR>
-<UL>
- <LI> 검색어가 포함되는 영화를 검색 할 수 있습니다. </LI>
-</UL>
-<BR>
-<BR>
-<BR>
+<br>
+<br>
+<details>
+ <summary> 영화 검색 엑티비티 플로우 차트
+ 
+ </summary> 
+ 
+<img src='https://github.com/oals/portfolioMovie/assets/136543676/a6738cbd-c9c5-4498-a44c-c152ade52d0e'>
+</details>
+<br>
+<br>
 
 <HR>
 
@@ -108,26 +128,23 @@
 
 
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/0b6f23e5-ffb9-474a-bf62-5128a548828c" height="350">
-
-
-<BR>
-<UL>
- <LI> 최신 예메한 내역 순으로 조회 할 수 있게 만들었습니다. </LI>
-</UL>
-<BR>
-<BR>
-
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/bec8859c-f997-4879-bea5-31be976f4f33" height="350">
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/7777b12b-0adf-47cd-8db6-478e2daec1fe" height="350">
 <img src="https://github.com/oals/portfolioMovie/assets/136543676/5fe8dc31-2195-4531-a61f-30efc4bcf1cd" height="350">
 
 
-<BR>
-<UL>
- <LI> 해당 내역 클릭 시 예매 상세 정보를 볼 수 있게 구현 했습니다.</LI>
-</UL>
-<BR>
-<BR>
+
+<br>
+<br>
+<details>
+ <summary> 예매 내역 엑티비티 플로우 차트
+ 
+ </summary> 
+ 
+<img src='https://github.com/oals/portfolioMovie/assets/136543676/79aa01da-58ed-4ced-9e34-e1c7874928dd'>
+</details>
+<br>
+<br>
 
 
 <HR>
